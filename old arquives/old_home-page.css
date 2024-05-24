@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.64);
+}
+
+main{
+    padding: 20px;
+    margin-left: 82px; /* Defina a mesma largura que o sidebar inicialmente */
+    transition: margin-left 0.5s; /* Adicione uma transição suave */
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(71, 104, 61, 0.951);
+    height: auto;
+    border-radius: 0px 18px 18px 0px;
+    position: relative;
+    transition: all .5s;
+    min-width: 50px;
+}
+
+#sidebar.open-sidebar + main{
+    min-width: 200px; /* Defina a largura desejada quando aberto */
+}
+
+
+#sidebar-content {
+    padding: 12px;
+}
+
+#user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+#user_avatar{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#user_infos {
+    display: flex;
+    flex-direction: column;
+}
+
+#user_infos span:last-child {
+        color: #000000b8;
+        font-size: 12px;
+}
+
+#side_items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.side-item {
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.side-item.active {
+    background-color: rgba(255, 255, 255, 0.64);
+}
+
+.side-item:hover:not(.active), #logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.64);
+}
+
+.side-item a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    text-decoration: none;
+    color: #0a0a0a;
+    gap: 14px;
+}
+
+.side-item.active a {
+    color: #0a0a0a;
+}
+
+.side-item.active a i {
+    width: 20px;
+    height: 20px;
+}
+
+#open-button {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: rgba(255, 255, 255, 0.64);
+    color:rgba(71, 104, 61, 0.951);
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#icon-open_button {
+    transition: transform .3s ease;
+}
+
+.open-sidebar #icon-open_button {
+    transform: rotate(180deg);
+}
+
+.item-description {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+    height: auto; /* Alterado de 0px para auto */
+}
+
+#sidebar.open-sidebar {
+    min-width: 15%;
+}
+
+#sidebar.open-sidebar .item-description {
+    width: auto; 
+}
+
+#sidebar.opensidebar .side-item a {
+    justify-content: flex-start;
+    gap: 14px;
+}
+
