@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: rgba(52, 93, 40, 0.951);
+        }
+        div{ /* inicio do conteiner de login */
+            background-color: rgba(255, 255, 255, 0.64);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 80px;
+            border-radius: 15px;
+            color:black;
+            text-align: center;
+        }
+
+        input{
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+        button{
+            background-color: rgba(52, 93, 40, 0.951);
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgba(93, 120, 85, 0.951);
+        }
+        #imagem-logo {
+            margin-top: 50px; /* Add margin-top to move the image down */
+            display: block;}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Login</h1>
+        <input type="text" placeholder="Nome">
+        <br><br>
+        <input type="password" placeholder="Senha">
+        <br><br>
+        <button>Enviar</button>
+    </div>
+    <img id="imagem-logo" src="https://d335luupugsy2.cloudfront.net/cms/files/82408/1614273676/$2vk7vq5e7pw" alt="Logo" 
+    width="150px" height="100px">
+</body>
+</html>
